@@ -1,0 +1,101 @@
+.header {
+  display: flex;
+  position: relative;
+
+  .header__title {
+    padding: 0 0 0 5rem;
+    align-self: center;
+    flex: 1;
+
+    @media (max-width: map-get($grid-breakpoints, xl)) {
+      padding: 0 1rem 0 3rem;
+    }
+  }
+  .header__span {
+    color: $color-primary-light;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .header__underline {
+    top: -10px;
+    padding: 0;
+    @media (max-width: map-get($grid-breakpoints, xl)) {
+      width: 27rem;
+    }
+  }
+
+  .header__caption {
+    flex: 1;
+    margin-top: 3rem;
+  }
+
+  .header__content {
+    flex: 1;
+    position: relative;
+  }
+
+  .header__content img {
+    position: absolute;
+    height: 80vh;
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .header__search {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    padding: 1.6% 3%; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+
+    @media (max-width: map-get($grid-breakpoints, xl)) {
+      width: 100%;
+    }
+
+    input {
+      max-width: 100%;
+      flex: 1;
+      font-family: inherit;
+      background-color: white;
+      border: none;
+      padding: 1% 1% 1% 2%; 
+      margin-right: 1%;
+      transition: all 0.2s;
+      border-right: 1px solid #ccc;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .header__icon {
+      height: 2rem;
+      width: 2rem;
+      fill: var(--color-grey-dark-3);
+      margin: 0 1rem;
+    }
+
+    select {
+      max-width: 90%;
+      border: none;
+      background-color: white;
+      padding: 2.8% 5%; 
+      color: $color-black;
+      font-family: inherit;
+      font-weight: 400;
+      border-radius: 12px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+
+}

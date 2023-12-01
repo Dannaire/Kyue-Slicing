@@ -1,0 +1,54 @@
+
+//HANYA CONTOH
+
+
+// COLORS
+$color-primary: #DDF3FF !important;
+$color-primary-light: #66C1EE;
+$color-primary-light-2: #EFF9FF;
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #FD964B;
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #5643fa;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #959EAE;
+$color-grey-light-3:#B0B8C7;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #162238;
+
+
+// FONT
+// $default-font-size: 1.6rem;
+// FONT VARIABLES
+$font-primary: 'Outfit', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+$grid-breakpoints: (
+  xs: 0,
+  xs-1: 320px,
+  xs-2: 375px,
+  xs-3: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  lg-1: 1064px,
+  lg-2: 1098px,
+  xl: 1200px,
+  xl-1: 1320px,
+  xxl: 1440px,
+);
