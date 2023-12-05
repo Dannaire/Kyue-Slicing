@@ -243,7 +243,7 @@ body {
   .slider-2 .slick-track {
     margin: 0 0 0 -4rem !important; } }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .slider-2 .slick-track {
     margin: 0 0 0 -0.2rem !important; } }
 
