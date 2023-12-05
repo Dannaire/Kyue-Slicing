@@ -10,17 +10,28 @@ html {
 }
 
 body {
-    // background-color: #6D5D4B;
     font-family: $font-primary;
     color: $color-grey-dark-2;
     font-weight: 300;
     line-height: 1.6;
     overflow-x: hidden;
-    background-color: #F8F9FB;
+    background-color: $color-bcg;
 }
 
 .container {
     display: grid;
     grid-template-rows: 90vh min-content  repeat(3, min-content);
-    grid-template-columns: [sidebar-start] 5rem [sidebar-end full-start] minmax(6rem, 1fr)  [center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(5rem, 1fr) [full-end]   ;
+    grid-template-columns: [sidebar-start] 5rem [sidebar-end full-start] minmax(5rem, 1fr)  [center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(5rem, 1fr) [full-end] ;
+
+    @media (max-width: map-get($grid-breakpoints, xl)) {
+        grid-template-rows: 60vh min-content repeat(3, min-content);
+    }
+    @media (max-width: map-get($grid-breakpoints, lg)) {
+        grid-template-rows: 50vh min-content repeat(3, min-content);
+        grid-template-columns: [sidebar-start] 3rem [sidebar-end full-start] minmax(5rem, 1fr)  [center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(3rem, 1fr) [full-end] ;
+    }
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+        grid-template-rows: min-content min-content repeat(2, min-content);
+        grid-template-columns: [sidebar-start] 1.5rem [sidebar-end full-start] minmax(5rem, 1fr)  [center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(1.5rem, 1fr) [full-end] ;
+    }
 }

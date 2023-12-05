@@ -1,7 +1,11 @@
-.card{
+.card {
   margin-top: 2rem;
+
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    margin-top: 0;
+  }
 }
-.card--2{
+.card--2 {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -9,15 +13,16 @@
   gap: 1rem;
   @media (max-width: map-get($grid-breakpoints, lg-2)) {
     grid-template-columns: repeat(3, 1fr);
-    }
-}  
-
+  }
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 .card__content {
-
   cursor: pointer;
   background-color: #ffffff;
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   text-align: center;
@@ -26,6 +31,8 @@
     width: 100%;
     height: auto;
     margin-bottom: 15px;
+    align-self: center;
+    margin: 0 auto;
   }
 
   .card__title {
@@ -37,105 +44,122 @@
     text-align: left;
     margin-bottom: 1rem;
   }
-  .card__footer{
-
+  .card__footer {
     display: flex;
 
-    &--text{
-      margin-left: .3rem;
+    &--text {
+      margin-left: 0.3rem;
+      white-space: nowrap;
     }
-    &--ellipse{
+    &--ellipse {
       align-self: center;
       border-radius: 50%;
-      margin: 0 .75rem;
+      margin: 0 0.75rem;
       width: 0.25rem;
       height: 0.25rem;
       background-color: $color-grey-light-2;
     }
   }
-  &--4{
+  &--4 {
     @media (max-width: map-get($grid-breakpoints, lg-2)) {
       display: none;
-      }
+    }
   }
 }
 
-/* the slides */
 .slick-slide {
-  margin: 1rem 1rem 1rem .1rem ;
+  margin: 1rem 1rem 1rem 0.1rem;
 }
-/* the parent */
 .slick-list {
-  // margin: 0 -1rem 0 0 ;
-  // border: 1px solid red;
-  // display: grid;
-  // grid-template-columns: repeat(4, 1fr);
-  // grid-gap: 1rem;
-  // gap: 1rem;
+  margin: 0 -24px 150px 0 !important;
 }
-.slick-dots{
+.slick-dots {
   display: none !important;
 }
-  
+.slick-track {
+  @media (max-width: map-get($grid-breakpoints, xs-3)) {
+    margin: 0 0 0 -3.5rem !important;
+  }
+}
+.slider-2 {
+  .slick-track {
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      margin: 0 0 0 -4rem !important;
+    }
+    @media (max-width: map-get($grid-breakpoints, xs-3)) {
+      margin: 0 0 0 -0.2rem !important;
+    }
+  }
+}
+
 .slick-prev {
   left: 0;
-  transform: rotate(180deg); 
+  transform: rotate(180deg);
 }
 
 .slick-next {
-  right: 0; }
+  right: 0;
+}
 
-  .custom-arrow {
-    font-size: 24px;
-    color: #333;
-    cursor: pointer;
-    padding: .3rem;
-    margin: 0;
-    border-radius: 0.25rem;
-    background-color: #ffffff;
-    box-shadow: 2px 3px 32px 0px #D1D3E352;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
+.custom-arrow {
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  padding: 0.3rem;
+  margin: 0;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  box-shadow: 2px 3px 32px 0px #d1d3e352;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.custom-arrow img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.custom-prev-arrow {
+  position: absolute;
+  top: 40%;
+  left: -1rem;
+  transform: translateY(-50%);
+  &--2 {
+    top: 50%;
   }
-  
-  .custom-arrow img {
-    max-width: 100%;
-    max-height: 100%;
+}
+
+.custom-next-arrow {
+  position: absolute;
+  top: 40%;
+  right: -2rem;
+  transform: translateY(-50%);
+  &--2 {
+    top: 50%;
   }
-  
-  .custom-prev-arrow {
-    position: absolute;
-    top: 40%;
-    left: -1rem;
-    transform: translateY(-50%);
-    &--2{
-      top: 50%;
-    }
-  }
-  
-  .custom-next-arrow {
-    position: absolute;
-    top: 40%;
-    right: -.3rem;
-    transform: translateY(-50%);
-    &--2{
-      top: 50%;
-    }
-  }
+}
 
 .cards {
   margin-top: 2rem;
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    margin-top: 0;
+  }
 
   .card__content--landscape {
+    max-height: 140px;
     display: flex !important;
     background-color: #ffffff;
     border-radius: 0.75rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     cursor: pointer;
-  
+
+    @media (max-width: map-get($grid-breakpoints, lg)) {
+      padding: 1rem 0 1rem 1rem;
+    }
+
     .card-left {
       width: 30%;
       display: flex;
@@ -143,38 +167,34 @@
       align-items: center;
       justify-content: center;
     }
-  
+
     .card__img {
       max-width: 100px;
       height: 100px;
-      border-radius: 10px; 
+      border-radius: 10px;
     }
-    .card-right{
+    .card-right {
       padding: 0 1rem;
+      white-space: nowrap;
     }
-  
-    .card__title {
-      font-size: 1.5rem;
-    }
-  
+
     .card__subtitle {
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
-  
+
     .card__footer {
       display: flex;
       margin-top: 0.1rem;
       padding: 0rem;
-  
+
       &--ellipse {
         align-self: center;
         border-radius: 50%;
         margin: 0 0.75rem;
         width: 0.25rem;
         height: 0.25rem;
-        background-color: $color-grey-light-2; 
+        background-color: $color-grey-light-2;
       }
     }
   }
 }
-

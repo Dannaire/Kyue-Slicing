@@ -1,47 +1,88 @@
-.header {
+.header-wrap {
   display: flex;
   position: relative;
+  flex-wrap: wrap;
+  background-color: $color-primary;
+  padding: 0.3rem;
+  border-radius: 0.8rem;
+  height: 100%;
+
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    padding: 0 0 0 1rem;
+  }
 
   .header__title {
     padding: 0 0 0 5rem;
+    width: 50%;
     align-self: center;
     flex: 1;
 
     @media (max-width: map-get($grid-breakpoints, xl)) {
-      padding: 0 1rem 0 3rem;
+      padding: 0 1rem 0 0;
+    }
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      padding: 0 1rem 0 0;
+    }
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      width: 60%;
     }
   }
   .header__span {
     color: $color-primary-light;
     position: relative;
-    overflow: hidden;
-    white-space: nowrap;
     text-overflow: ellipsis;
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      white-space: nowrap;
+    }
   }
 
   .header__underline {
     top: -10px;
     padding: 0;
     @media (max-width: map-get($grid-breakpoints, xl)) {
-      width: 27rem;
+      width: 90%;
+    }
+    @media (max-width: map-get($grid-breakpoints, xs-3)) {
+      width: 100%;
     }
   }
 
   .header__caption {
     flex: 1;
     margin-top: 3rem;
+
+    @media (max-width: map-get($grid-breakpoints, lg)) {
+      margin-top: 1.2rem;
+    }
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      display: none;
+    }
   }
 
   .header__content {
     flex: 1;
     position: relative;
+
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      padding: 5rem 0;
+      overflow: hidden;
+    }
   }
 
   .header__content img {
     position: absolute;
-    height: 80vh;
+    height: 100%;
     max-width: 100%;
     margin-top: 0;
+
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      height: 115%;
+      overflow: hidden;
+      max-width: 110%;
+      width: 100%;
+      margin-left: 1rem;
+      top: -1rem;
+    }
   }
 
   .header__search {
@@ -50,12 +91,24 @@
     align-items: center;
     background-color: white;
     border-radius: 12px;
-    padding: 1.6% 3%; 
+    padding: 1.6% 3%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 80%;
 
     @media (max-width: map-get($grid-breakpoints, xl)) {
       width: 100%;
+    }
+    @media (max-width: map-get($grid-breakpoints, lg)) {
+      margin-top: 1.2rem;
+      width: 90%;
+    }
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      width: 100%;
+    }
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      top: -5rem;
+      position: absolute;
+      left: -0.2rem;
     }
 
     input {
@@ -64,7 +117,7 @@
       font-family: inherit;
       background-color: white;
       border: none;
-      padding: 1% 1% 1% 2%; 
+      padding: 1% 1% 1% 2%;
       margin-right: 1%;
       transition: all 0.2s;
       border-right: 1px solid #ccc;
@@ -72,20 +125,24 @@
       &:focus {
         outline: none;
       }
+
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        padding: 0.5rem;
+        border: none;
+      }
     }
 
-    .header__icon {
-      height: 2rem;
-      width: 2rem;
-      fill: var(--color-grey-dark-3);
-      margin: 0 1rem;
+    .icon--2 {
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        display: none;
+      }
     }
 
     select {
       max-width: 90%;
       border: none;
       background-color: white;
-      padding: 2.8% 5%; 
+      padding: 2.8% 5%;
       color: $color-black;
       font-family: inherit;
       font-weight: 400;
@@ -94,8 +151,13 @@
       &:focus {
         outline: none;
       }
+
+      @media (max-width: map-get($grid-breakpoints, lg)) {
+        max-width: 10%;
+      }
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        display: none;
+      }
     }
   }
-
-
 }
