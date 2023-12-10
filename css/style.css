@@ -518,22 +518,24 @@ body {
   .footers .footers__right {
     display: flex;
     flex-direction: column; }
-    .footers .footers__right .dowload_logo {
-      cursor: pointer;
-      width: auto;
-      height: 100%; }
-      @media (max-width: 1098px) {
-        .footers .footers__right .dowload_logo {
-          width: 8.5rem;
-          height: 2.625rem; } }
-      @media (max-width: 768px) {
-        .footers .footers__right .dowload_logo {
-          width: 6.5rem;
-          height: 2.625rem; } }
-      @media (max-width: 480px) {
-        .footers .footers__right .dowload_logo {
-          width: 4.5rem;
-          height: 1.625rem; } }
+    .footers .footers__right .download-icons {
+      text-decoration: none; }
+      .footers .footers__right .download-icons .dowload_logo {
+        cursor: pointer;
+        width: auto;
+        height: 100%; }
+        @media (max-width: 1098px) {
+          .footers .footers__right .download-icons .dowload_logo {
+            width: 8.5rem;
+            height: 2.625rem; } }
+        @media (max-width: 768px) {
+          .footers .footers__right .download-icons .dowload_logo {
+            width: 6.5rem;
+            height: 2.625rem; } }
+        @media (max-width: 480px) {
+          .footers .footers__right .download-icons .dowload_logo {
+            width: 4.5rem;
+            height: 1.625rem; } }
     .footers .footers__right .footers__text {
       margin: 1rem 0; }
 
