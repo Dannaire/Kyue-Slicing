@@ -76,32 +76,32 @@
     border: none;
   }
 }
-
-.header__btn {
+.header__btn--1 {
   padding: 1rem 2rem;
   margin-left: 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
+  background-color: $color-white;
+  color: $color-secondary-dark;
+  border: 1px solid $color-secondary-dark;
+  font-weight: 700;
 
-  &--1 {
-    background-color: $color-white;
-    color: $color-secondary-dark;
-    border: 1px solid $color-secondary-dark;
-    font-weight: 700;
-
-    &:hover {
-      background-color: $color-secondary-dark;
-      color: $color-white;
-      transition: all 0.2s;
-    }
-
-    @media (max-width: map-get($grid-breakpoints, md)) {
-      display: none;
-    }
+  &:hover {
+    background-color: $color-secondary-dark;
+    color: $color-white;
+    transition: all 0.2s;
   }
 
-  &--2 {
-    background-color: $color-black;
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    display: none;
+  }
+}
+.header__btn--2 {
+  padding: 1rem 2rem;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: $color-black;
     color: $color-white;
     border: none;
     font-weight: 700;
@@ -110,7 +110,6 @@
       transition: all 0.2s;
       opacity: 0.8;
     }
-  }
 }
 
 .header__menu-icon {
@@ -131,8 +130,8 @@
       height: 3rem;
       background-color: $color-white;
       border-radius: 50%;
-      top: -0.2rem;
-      left: -0.8rem;
+      top: -0.25rem;
+      left: -.85rem;
       z-index: -1;
       border: 1px solid #ccc;
     }
@@ -173,17 +172,15 @@
 }
 
 @media (max-width: map-get($grid-breakpoints, md)) {
-  .header__btn {
+  .header__btn--1
+  ,.header__btn--2 {
     width: 90%;
     margin: 0;
-
-    &--1 {
-      display: none;
-    }
   }
 
   .header__links a,
-  .header__btn {
+  .header__btn--1,
+  .header__btn--2 {
     margin-top: 1rem;
   }
 

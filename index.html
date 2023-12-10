@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" type="image/png" href="img/kyuelogo.png" />
+    <link rel="shortcut icon" type="image/png" href="img/Logo Square.png" />
     <!-- Slick CSS -->
     <link
       rel="stylesheet"
@@ -30,38 +30,40 @@
   </head>
   <!-- START BODY -->
   <body class="container">
-    <!-- START HEADER  -->
+    <!-- START NAV HEADER  -->
     <nav class="header__nav">
       <div class="header__left">
         <img src="img/kyuelogo.png" alt="Logo" class="header__logo" />
-        <button class="header__btn header__btn--1">List Your Business</button>
+        <button class="header__btn--1">List Your Business</button>
       </div>
       <div class="header__right">
         <input type="checkbox" id="menu-toggle" />
         <label for="menu-toggle" class="header__menu-icon">&#9776;</label>
         <div class="header__links">
           <a href="#" class="header__login">Login</a>
-          <button class="header__btn header__btn--2">Create Account</button>
+          <button class="header__btn--2">Create Account</button>
         </div>
       </div>
     </nav>
-    <header class="header">
-      <div class="header-wrap">
-        <div class="header__title">
-          <h4 class="header__text">
+    <!-- END NAV HEADER  -->
+    <!-- START HERO SECTION -->
+    <section class="hero">
+      <div class="hero-wrap">
+        <div class="hero__item-left">
+          <h4 class="hero__item--text">
             The Complete
-            <span class="header__span"> booking solution </span>
+            <span class="hero__item--span"> booking solution </span>
           </h4>
           <img
-            class="header__underline"
+            class="hero__item-underline"
             src="img/underline.png"
             alt="underline"
           />
-          <p class="header__caption">
+          <p class="hero__item-caption">
             Find and book appointments for beauty,<br />
             wellness & fitness services.
           </p>
-          <div class="header__search">
+          <div class="hero__item-search">
             <img src="img/searchicon.png" alt="Search Icon" class="icon" />
             <input type="text" placeholder="What are you looking for?" />
             <img
@@ -69,21 +71,37 @@
               alt="Location Icon"
               class="icon icon--2"
             />
-            <select>
-              <option value="Location">Current Location</option>
-              <option value="Location">Location</option>
-              <option value="Location">Location</option>
+            <select class="hero__item-select">
+              <option class="hero__item-select--option" value="Location">
+                Current Location
+              </option>
+              <option class="hero__item-select--option" value="Location">
+                Locationn
+              </option>
+              <option class="hero__item-select--option" value="Locationn">
+                Location
+              </option>
             </select>
           </div>
         </div>
-
-        <div class="header__content">
-          <img src="img/headerimg.png" alt="Kyue Header" />
+        <div class="hero__item-right">
+          <div class="hero__item-right-img">
+            <img
+              class="hero__item-pattern"
+              src="img/headercircle.png"
+              alt="Kyue Header"
+            />
+            <img
+              class="hero__item-illustration"
+              src="img/headerperson.png"
+              alt="Kyue Header"
+            />
+          </div>
         </div>
       </div>
-    </header>
+    </section>
+    <!-- END HERO SECTION -->
 
-    <!-- END HEADER  -->
     <!-- START FEATURE -->
 
     <div class="feature">
@@ -129,190 +147,142 @@
     <!-- START POPULAR  -->
 
     <section class="popular">
-      <div class="popular__wrap">
-        <h4 class="heading--1 popular__title">Popular Near You</h4>
-        <p class="sub-heading popular__link">View All</p>
-      </div>
-      <div class="card">
-        <div class="slider">
-          <div class="card__content">
-            <img class="card__img" src="img/card1.png" alt="" />
-            <h4 class="heading--2 card__title">Beauty Salon</h4>
-            <p class="sub-heading--2 card__subtitle">
-              16 Newgate Street, United Kingdom
-            </p>
-            <div class="card__footer">
+      <div class="popular__container">
+        <div class="popular__wrap">
+          <h4 class="popular__title">Popular Near You</h4>
+          <p class="popular__link">View All</p>
+        </div>
+        <div class="popular-slider-wrapper">
+          <div class="popular-slider">
+            <div class="popular-slider__item">
               <img
-                src="img/bintang.png"
+                class="popular-slider__item-img"
+                src="img/card1.png"
                 alt=""
-                class="card__footer card__footer--rate"
               />
-              <p class="sub-heading--1 card__footer--text">5.0</p>
-              <div class="card__footer card__footer--ellipse"></div>
-              <img
-                src="img/map.png"
-                alt=""
-                class="card__footer card__footer--map"
-              />
-              <p class="sub-heading--1 card__footer--text card__footer--text">
-                2.5 miles
+              <h4 class="popular-slider__item-title">Beauty Salon</h4>
+              <p class="popular-slider__item-subtitle">
+                16 Newgate Street, United Kingdom
               </p>
+              <div class="popular-slider__item-footer">
+                <img
+                  src="img/bintang.png"
+                  alt=""
+                  class="popular-slider__item-footer--rate"
+                />
+                <p class="popular-slider__item-footer--text">5.0</p>
+                <div class="popular-slider__item-footer--ellipse"></div>
+                <img
+                  src="img/map.png"
+                  alt=""
+                  class="popular-slider__item-footer--map"
+                />
+                <p class="popular-slider__item-footer--text">2.5 miles</p>
+              </div>
             </div>
-          </div>
-          <div class="card__content">
-            <img class="card__img" src="img/card2.png" alt="" />
-            <h4 class="heading--2 card__title">Buzzy Salon</h4>
-            <p class="sub-heading--2 card__subtitle">
-              16 Newgate Street, United Kingdom
-            </p>
-            <div class="card__footer">
+            <div class="popular-slider__item">
               <img
-                src="img/bintang.png"
+                class="popular-slider__item-img"
+                src="img/card2.png"
                 alt=""
-                class="card__footer card__footer--rate"
               />
-              <p class="sub-heading--1 card__footer--text">5.0</p>
-              <div class="card__footer card__footer--ellipse"></div>
-              <img
-                src="img/map.png"
-                alt=""
-                class="card__footer card__footer--map"
-              />
-              <p class="sub-heading--1 card__footer--text">2.5 miles</p>
-            </div>
-          </div>
-          <div class="card__content">
-            <img class="card__img" src="img/card3.png" alt="" />
-            <h4 class="heading--2 card__title">Nails Art NYC</h4>
-            <p class="sub-heading--2 card__subtitle">
-              16 Newgate Street, United Kingdom
-            </p>
-            <div class="card__footer">
-              <img
-                src="img/bintang.png"
-                alt=""
-                class="card__footer card__footer--rate"
-              />
-              <p class="sub-heading--1 card__footer--text">5.0</p>
-              <div class="card__footer card__footer--ellipse"></div>
-              <img
-                src="img/map.png"
-                alt=""
-                class="card__footer card__footer--map"
-              />
-              <p class="sub-heading--1 card__footer--text">2.5 miles</p>
-            </div>
-          </div>
-          <div class="card__content">
-            <img class="card__img" src="img/card4.png" alt="" />
-            <h4 class="heading--2 card__title">Gergous SPA</h4>
-            <p class="sub-heading--2 card__subtitle">
-              16 Newgate Street, United Kingdom
-            </p>
-            <div class="card__footer">
-              <img
-                src="img/bintang.png"
-                alt=""
-                class="card__footer card__footer--rate"
-              />
-              <p class="sub-heading--1 card__footer--text">5.0</p>
-              <div class="card__footer card__footer--ellipse"></div>
-              <img
-                src="img/map.png"
-                alt=""
-                class="card__footer card__footer--map"
-              />
-              <p class="sub-heading--1 card__footer--text">2.5 miles</p>
-            </div>
-          </div>
-          <div class="card__content">
-            <img class="card__img" src="img/card2.png" alt="" />
-            <h4 class="heading--2 card__title">Buzzy Salon</h4>
-            <p class="sub-heading--2 card__subtitle">
-              16 Newgate Street, United Kingdom
-            </p>
-            <div class="card__footer">
-              <img
-                src="img/bintang.png"
-                alt=""
-                class="card__footer card__footer--rate"
-              />
-              <p class="sub-heading--1 card__footer--text">5.0</p>
-              <div class="card__footer card__footer--ellipse"></div>
-              <img
-                src="img/map.png"
-                alt=""
-                class="card__footer card__footer--map"
-              />
-              <p class="sub-heading--1 card__footer--text">2.5 miles</p>
-            </div>
-          </div>
-          <div class="card__content">
-            <img class="card__img" src="img/card4.png" alt="" />
-            <h4 class="heading--2 card__title">Gergous SPA</h4>
-            <p class="sub-heading--2 card__subtitle">
-              16 Newgate Street, United Kingdom
-            </p>
-            <div class="card__footer">
-              <img
-                src="img/bintang.png"
-                alt=""
-                class="card__footer card__footer--rate"
-              />
-              <p class="sub-heading--1 card__footer--text">5.0</p>
-              <div class="card__footer card__footer--ellipse"></div>
-              <img
-                src="img/map.png"
-                alt=""
-                class="card__footer card__footer--map"
-              />
-              <p class="sub-heading--1 card__footer--text">2.5 miles</p>
-            </div>
-          </div>
-          <div class="card__content">
-            <img class="card__img" src="img/card1.png" alt="" />
-            <h4 class="heading--2 card__title">Beauty Salon</h4>
-            <p class="sub-heading--2 card__subtitle">
-              16 Newgate Street, United Kingdom
-            </p>
-            <div class="card__footer">
-              <img
-                src="img/bintang.png"
-                alt=""
-                class="card__footer card__footer--rate"
-              />
-              <p class="sub-heading--1 card__footer--text">5.0</p>
-              <div class="card__footer card__footer--ellipse"></div>
-              <img
-                src="img/map.png"
-                alt=""
-                class="card__footer card__footer--map"
-              />
-              <p class="sub-heading--1 card__footer--text card__footer--text">
-                2.5 miles
+              <h4 class="popular-slider__item-title">Beauty Salon</h4>
+              <p class="popular-slider__item-subtitle">
+                16 Newgate Street, United Kingdom
               </p>
+              <div class="popular-slider__item-footer">
+                <img
+                  src="img/bintang.png"
+                  alt=""
+                  class="popular-slider__item-footer--rate"
+                />
+                <p class="popular-slider__item-footer--text">5.0</p>
+                <div class="popular-slider__item-footer--ellipse"></div>
+                <img
+                  src="img/map.png"
+                  alt=""
+                  class="popular-slider__item-footer--map"
+                />
+                <p class="popular-slider__item-footer--text">2.5 miles</p>
+              </div>
             </div>
-          </div>
-          <div class="card__content">
-            <img class="card__img" src="img/card3.png" alt="" />
-            <h4 class="heading--2 card__title">Nails Art NYC</h4>
-            <p class="sub-heading--2 card__subtitle">
-              16 Newgate Street, United Kingdom
-            </p>
-            <div class="card__footer">
+            <div class="popular-slider__item">
               <img
-                src="img/bintang.png"
+                class="popular-slider__item-img"
+                src="img/card3.png"
                 alt=""
-                class="card__footer card__footer--rate"
               />
-              <p class="sub-heading--1 card__footer--text">5.0</p>
-              <div class="card__footer card__footer--ellipse"></div>
+              <h4 class="popular-slider__item-title">Beauty Salon</h4>
+              <p class="popular-slider__item-subtitle">
+                16 Newgate Street, United Kingdom
+              </p>
+              <div class="popular-slider__item-footer">
+                <img
+                  src="img/bintang.png"
+                  alt=""
+                  class="popular-slider__item-footer--rate"
+                />
+                <p class="popular-slider__item-footer--text">5.0</p>
+                <div class="popular-slider__item-footer--ellipse"></div>
+                <img
+                  src="img/map.png"
+                  alt=""
+                  class="popular-slider__item-footer--map"
+                />
+                <p class="popular-slider__item-footer--text">2.5 miles</p>
+              </div>
+            </div>
+            <div class="popular-slider__item">
               <img
-                src="img/map.png"
+                class="popular-slider__item-img"
+                src="img/card4.png"
                 alt=""
-                class="card__footer card__footer--map"
               />
-              <p class="sub-heading--1 card__footer--text">2.5 miles</p>
+              <h4 class="popular-slider__item-title">Beauty Salon</h4>
+              <p class="popular-slider__item-subtitle">
+                16 Newgate Street, United Kingdom
+              </p>
+              <div class="popular-slider__item-footer">
+                <img
+                  src="img/bintang.png"
+                  alt=""
+                  class="popular-slider__item-footer--rate"
+                />
+                <p class="popular-slider__item-footer--text">5.0</p>
+                <div class="popular-slider__item-footer--ellipse"></div>
+                <img
+                  src="img/map.png"
+                  alt=""
+                  class="popular-slider__item-footer--map"
+                />
+                <p class="popular-slider__item-footer--text">2.5 miles</p>
+              </div>
+            </div>
+            <div class="popular-slider__item">
+              <img
+                class="popular-slider__item-img"
+                src="img/card2.png"
+                alt=""
+              />
+              <h4 class="popular-slider__item-title">Beauty Salon</h4>
+              <p class="popular-slider__item-subtitle">
+                16 Newgate Street, United Kingdom
+              </p>
+              <div class="popular-slider__item-footer">
+                <img
+                  src="img/bintang.png"
+                  alt=""
+                  class="popular-slider__item-footer--rate"
+                />
+                <p class="popular-slider__item-footer--text">5.0</p>
+                <div class="popular-slider__item-footer--ellipse"></div>
+                <img
+                  src="img/map.png"
+                  alt=""
+                  class="popular-slider__item-footer--map"
+                />
+                <p class="popular-slider__item-footer--text">2.5 miles</p>
+              </div>
             </div>
           </div>
         </div>
@@ -324,106 +294,123 @@
     <!-- START TOP RATED -->
 
     <div class="top-rated">
-      <div class="top-rated__wrap">
-        <h4 class="heading--1 card__footer--text popular__title">Top Rated</h4>
-        <p class="sub-heading popular__link">View All</p>
-      </div>
-      <div class="cards">
-        <div class="slider-2">
-          <div class="card__content--landscape">
-            <div class="card-left">
-              <img class="card__img" src="img/card5.png" alt="" />
-            </div>
-            <div class="card-right">
-              <h4 class="heading--2 card__title">Beauty Salon</h4>
-              <p class="sub-heading--2 card__subtitle">Jl. Pulau Sayang</p>
-              <div class="card__footer">
+      <div class="top-rated__container">
+        <div class="top-rated__wrap">
+          <h4 class="top-rated__title">Top Rated</h4>
+          <p class="top-rated__link">View All</p>
+        </div>
+        <div class="top-rated-slider__wrapper">
+          <div class="top-rated-slider">
+            <div class="top-rated-slider__item">
+              <div class="top-rated-slider__item-left">
                 <img
-                  src="img/bintang.png"
+                  class="top-rated-slider__item-img"
+                  src="img/card5.png"
                   alt=""
-                  class="card__footer card__footer--rate"
                 />
-                <p class="sub-heading--1 card__footer--text">5.0</p>
-                <div class="card__footer card__footer--ellipse"></div>
-                <img
-                  src="img/map.png"
-                  alt=""
-                  class="card__footer card__footer--map"
-                />
-                <p class="sub-heading--1 card__footer--text">2.5 miles</p>
+              </div>
+              <div class="top-rated-slider__item-right">
+                <h4 class="top-rated-slider__item-title">Beauty Salon</h4>
+                <p class="top-rated-slider__item-subtitle">Jl. Pulau Sayang</p>
+                <div class="top-rated-slider__item-footer">
+                  <img
+                    src="img/bintang.png"
+                    alt=""
+                    class="top-rated-slider__item-footer--rate"
+                  />
+                  <p class="top-rated-slider__item-footer--text">5.0</p>
+                  <div class="top-rated-slider__item-footer--ellipse"></div>
+                  <img
+                    src="img/map.png"
+                    alt=""
+                    class="top-rated-slider__item-footer--map"
+                  />
+                  <p class="top-rated-slider__item-footer--text">2.5 miles</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="card__content--landscape">
-            <div class="card-left">
-              <img class="card__img" src="img/card2.png" alt="" />
-            </div>
-            <div class="card-right">
-              <h4 class="heading--2 card__title">Beauty Salon</h4>
-              <p class="sub-heading--2 card__subtitle">Jl. Pulau Sayang</p>
-              <div class="card__footer">
+            <div class="top-rated-slider__item">
+              <div class="top-rated-slider__item-left">
                 <img
-                  src="img/bintang.png"
+                  class="top-rated-slider__item-img"
+                  src="img/card1.png"
                   alt=""
-                  class="card__footer card__footer--rate"
                 />
-                <p class="sub-heading--1 card__footer--text">5.0</p>
-                <div class="card__footer card__footer--ellipse"></div>
-                <img
-                  src="img/map.png"
-                  alt=""
-                  class="card__footer card__footer--map"
-                />
-                <p class="sub-heading--1 card__footer--text">2.5 miles</p>
+              </div>
+              <div class="top-rated-slider__item-right">
+                <h4 class="top-rated-slider__item-title">Beauty Salon</h4>
+                <p class="top-rated-slider__item-subtitle">Jl. Pulau Sayang</p>
+                <div class="top-rated-slider__item-footer">
+                  <img
+                    src="img/bintang.png"
+                    alt=""
+                    class="top-rated-slider__item-footer--rate"
+                  />
+                  <p class="top-rated-slider__item-footer--text">5.0</p>
+                  <div class="top-rated-slider__item-footer--ellipse"></div>
+                  <img
+                    src="img/map.png"
+                    alt=""
+                    class="top-rated-slider__item-footer--map"
+                  />
+                  <p class="top-rated-slider__item-footer--text">2.5 miles</p>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div class="card__content--landscape">
-            <div class="card-left">
-              <img class="card__img" src="img/card6.png" alt="" />
-            </div>
-            <div class="card-right">
-              <h4 class="heading--2 card__title">Beauty Salon</h4>
-              <p class="sub-heading--2 card__subtitle">Jl. Pulau Sayang</p>
-              <div class="card__footer">
+            <div class="top-rated-slider__item">
+              <div class="top-rated-slider__item-left">
                 <img
-                  src="img/bintang.png"
+                  class="top-rated-slider__item-img"
+                  src="img/card6.png"
                   alt=""
-                  class="card__footer card__footer--rate"
                 />
-                <p class="sub-heading--1 card__footer--text">5.0</p>
-                <div class="card__footer card__footer--ellipse"></div>
-                <img
-                  src="img/map.png"
-                  alt=""
-                  class="card__footer card__footer--map"
-                />
-                <p class="sub-heading--1 card__footer--text">2.5 miles</p>
+              </div>
+              <div class="top-rated-slider__item-right">
+                <h4 class="top-rated-slider__item-title">Beauty Salon</h4>
+                <p class="top-rated-slider__item-subtitle">Jl. Pulau Sayang</p>
+                <div class="top-rated-slider__item-footer">
+                  <img
+                    src="img/bintang.png"
+                    alt=""
+                    class="top-rated-slider__item-footer--rate"
+                  />
+                  <p class="top-rated-slider__item-footer--text">5.0</p>
+                  <div class="top-rated-slider__item-footer--ellipse"></div>
+                  <img
+                    src="img/map.png"
+                    alt=""
+                    class="top-rated-slider__item-footer--map"
+                  />
+                  <p class="top-rated-slider__item-footer--text">2.5 miles</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="card__content--landscape">
-            <div class="card-left">
-              <img class="card__img" src="img/card6.png" alt="" />
-            </div>
-            <div class="card-right">
-              <h4 class="heading--2 card__title">Beauty Salon</h4>
-              <p class="sub-heading--2 card__subtitle">Jl. Pulau Sayang</p>
-              <div class="card__footer">
+            <div class="top-rated-slider__item">
+              <div class="top-rated-slider__item-left">
                 <img
-                  src="img/bintang.png"
+                  class="top-rated-slider__item-img"
+                  src="img/card2.png"
                   alt=""
-                  class="card__footer card__footer--rate"
                 />
-                <p class="sub-heading--1 card__footer--text">5.0</p>
-                <div class="card__footer card__footer--ellipse"></div>
-                <img
-                  src="img/map.png"
-                  alt=""
-                  class="card__footer card__footer--map"
-                />
-                <p class="sub-heading--1 card__footer--text">2.5 miles</p>
+              </div>
+              <div class="top-rated-slider__item-right">
+                <h4 class="top-rated-slider__item-title">Beauty Salon</h4>
+                <p class="top-rated-slider__item-subtitle">Jl. Pulau Sayang</p>
+                <div class="top-rated-slider__item-footer">
+                  <img
+                    src="img/bintang.png"
+                    alt=""
+                    class="top-rated-slider__item-footer--rate"
+                  />
+                  <p class="top-rated-slider__item-footer--text">5.0</p>
+                  <div class="top-rated-slider__item-footer--ellipse"></div>
+                  <img
+                    src="img/map.png"
+                    alt=""
+                    class="top-rated-slider__item-footer--map"
+                  />
+                  <p class="top-rated-slider__item-footer--text">2.5 miles</p>
+                </div>
               </div>
             </div>
           </div>
@@ -435,192 +422,152 @@
     <!-- START RECENTLY VIEWED  -->
 
     <section class="recently-viewed">
-      <div class="recently-viewed__wrap">
-        <h4 class="heading--1 card__footer--text popular__title">
-          Recently Viewed
-        </h4>
-        <p class="sub-heading popular__link">View All</p>
-      </div>
-      <div class="card">
-        <div class="slider-3">
-          <div class="card__content">
-            <img class="card__img" src="img/card1.png" alt="" />
-            <h4 class="heading--2 card__title">Beauty Salon</h4>
-            <p class="sub-heading--2 card__subtitle">
-              16 Newgate Street, United Kingdom
-            </p>
-            <div class="card__footer">
+      <div class="recently-viewed__container">
+        <div class="recently-viewed__wrap">
+          <h4 class="recently-viewed__title">Recently Viewed</h4>
+          <p class="recently-viewed__link">View All</p>
+        </div>
+        <div class="recently-viewed-slider-wrapper">
+          <div class="recently-viewed-slider">
+            <div class="recently-viewed-slider__item">
               <img
-                src="img/bintang.png"
+                class="recently-viewed-slider__item-img"
+                src="img/card1.png"
                 alt=""
-                class="card__footer card__footer--rate"
               />
-              <p class="sub-heading--1 card__footer--text">5.0</p>
-              <div class="card__footer card__footer--ellipse"></div>
-              <img
-                src="img/map.png"
-                alt=""
-                class="card__footer card__footer--map"
-              />
-              <p class="sub-heading--1 card__footer--text card__footer--text">
-                2.5 miles
+              <h4 class="recently-viewed-slider__item-title">Beauty Salon</h4>
+              <p class="recently-viewed-slider__item-subtitle">
+                16 Newgate Street, United Kingdom
               </p>
+              <div class="recently-viewed-slider__item-footer">
+                <img
+                  src="img/bintang.png"
+                  alt=""
+                  class="recently-viewed-slider__item-footer--rate"
+                />
+                <p class="precently-viewed-slider__item-footer--text">5.0</p>
+                <div class="recently-viewed-slider__item-footer--ellipse"></div>
+                <img
+                  src="img/map.png"
+                  alt=""
+                  class="recently-viewed-slider__item-footer--map"
+                />
+                <p class="recently-viewed-slider__item-footer--text">
+                  2.5 miles
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="card__content">
-            <img class="card__img" src="img/card2.png" alt="" />
-            <h4 class="heading--2 card__title">Buzzy Salon</h4>
-            <p class="sub-heading--2 card__subtitle">
-              16 Newgate Street, United Kingdom
-            </p>
-            <div class="card__footer">
+            <div class="recently-viewed-slider__item">
               <img
-                src="img/bintang.png"
+                class="recently-viewed-slider__item-img"
+                src="img/card2.png"
                 alt=""
-                class="card__footer card__footer--rate"
               />
-              <p class="sub-heading--1 card__footer--text">5.0</p>
-              <div class="card__footer card__footer--ellipse"></div>
-              <img
-                src="img/map.png"
-                alt=""
-                class="card__footer card__footer--map"
-              />
-              <p class="sub-heading--1 card__footer--text">2.5 miles</p>
-            </div>
-          </div>
-          <div class="card__content">
-            <img class="card__img" src="img/card3.png" alt="" />
-            <h4 class="heading--2 card__title">Nails Art NYC</h4>
-            <p class="sub-heading--2 card__subtitle">
-              16 Newgate Street, United Kingdom
-            </p>
-            <div class="card__footer">
-              <img
-                src="img/bintang.png"
-                alt=""
-                class="card__footer card__footer--rate"
-              />
-              <p class="sub-heading--1 card__footer--text">5.0</p>
-              <div class="card__footer card__footer--ellipse"></div>
-              <img
-                src="img/map.png"
-                alt=""
-                class="card__footer card__footer--map"
-              />
-              <p class="sub-heading--1 card__footer--text">2.5 miles</p>
-            </div>
-          </div>
-          <div class="card__content">
-            <img class="card__img" src="img/card4.png" alt="" />
-            <h4 class="heading--2 card__title">Gergous SPA</h4>
-            <p class="sub-heading--2 card__subtitle">
-              16 Newgate Street, United Kingdom
-            </p>
-            <div class="card__footer">
-              <img
-                src="img/bintang.png"
-                alt=""
-                class="card__footer card__footer--rate"
-              />
-              <p class="sub-heading--1 card__footer--text">5.0</p>
-              <div class="card__footer card__footer--ellipse"></div>
-              <img
-                src="img/map.png"
-                alt=""
-                class="card__footer card__footer--map"
-              />
-              <p class="sub-heading--1 card__footer--text">2.5 miles</p>
-            </div>
-          </div>
-          <div class="card__content">
-            <img class="card__img" src="img/card2.png" alt="" />
-            <h4 class="heading--2 card__title">Buzzy Salon</h4>
-            <p class="sub-heading--2 card__subtitle">
-              16 Newgate Street, United Kingdom
-            </p>
-            <div class="card__footer">
-              <img
-                src="img/bintang.png"
-                alt=""
-                class="card__footer card__footer--rate"
-              />
-              <p class="sub-heading--1 card__footer--text">5.0</p>
-              <div class="card__footer card__footer--ellipse"></div>
-              <img
-                src="img/map.png"
-                alt=""
-                class="card__footer card__footer--map"
-              />
-              <p class="sub-heading--1 card__footer--text">2.5 miles</p>
-            </div>
-          </div>
-          <div class="card__content">
-            <img class="card__img" src="img/card4.png" alt="" />
-            <h4 class="heading--2 card__title">Gergous SPA</h4>
-            <p class="sub-heading--2 card__subtitle">
-              16 Newgate Street, United Kingdom
-            </p>
-            <div class="card__footer">
-              <img
-                src="img/bintang.png"
-                alt=""
-                class="card__footer card__footer--rate"
-              />
-              <p class="sub-heading--1 card__footer--text">5.0</p>
-              <div class="card__footer card__footer--ellipse"></div>
-              <img
-                src="img/map.png"
-                alt=""
-                class="card__footer card__footer--map"
-              />
-              <p class="sub-heading--1 card__footer--text">2.5 miles</p>
-            </div>
-          </div>
-          <div class="card__content">
-            <img class="card__img" src="img/card1.png" alt="" />
-            <h4 class="heading--2 card__title">Beauty Salon</h4>
-            <p class="sub-heading--2 card__subtitle">
-              16 Newgate Street, United Kingdom
-            </p>
-            <div class="card__footer">
-              <img
-                src="img/bintang.png"
-                alt=""
-                class="card__footer card__footer--rate"
-              />
-              <p class="sub-heading--1 card__footer--text">5.0</p>
-              <div class="card__footer card__footer--ellipse"></div>
-              <img
-                src="img/map.png"
-                alt=""
-                class="card__footer card__footer--map"
-              />
-              <p class="sub-heading--1 card__footer--text card__footer--text">
-                2.5 miles
+              <h4 class="recently-viewed-slider__item-title">Beauty Salon</h4>
+              <p class="recently-viewed-slider__item-subtitle">
+                16 Newgate Street, United Kingdom
               </p>
+              <div class="recently-viewed-slider__item-footer">
+                <img
+                  src="img/bintang.png"
+                  alt=""
+                  class="recently-viewed-slider__item-footer--rate"
+                />
+                <p class="precently-viewed-slider__item-footer--text">5.0</p>
+                <div class="recently-viewed-slider__item-footer--ellipse"></div>
+                <img
+                  src="img/map.png"
+                  alt=""
+                  class="recently-viewed-slider__item-footer--map"
+                />
+                <p class="recently-viewed-slider__item-footer--text">
+                  2.5 miles
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="card__content">
-            <img class="card__img" src="img/card3.png" alt="" />
-            <h4 class="heading--2 card__title">Nails Art NYC</h4>
-            <p class="sub-heading--2 card__subtitle">
-              16 Newgate Street, United Kingdom
-            </p>
-            <div class="card__footer">
+            <div class="recently-viewed-slider__item">
               <img
-                src="img/bintang.png"
+                class="recently-viewed-slider__item-img"
+                src="img/card3.png"
                 alt=""
-                class="card__footer card__footer--rate"
               />
-              <p class="sub-heading--1 card__footer--text">5.0</p>
-              <div class="card__footer card__footer--ellipse"></div>
+              <h4 class="recently-viewed-slider__item-title">Beauty Salon</h4>
+              <p class="recently-viewed-slider__item-subtitle">
+                16 Newgate Street, United Kingdom
+              </p>
+              <div class="recently-viewed-slider__item-footer">
+                <img
+                  src="img/bintang.png"
+                  alt=""
+                  class="recently-viewed-slider__item-footer--rate"
+                />
+                <p class="precently-viewed-slider__item-footer--text">5.0</p>
+                <div class="recently-viewed-slider__item-footer--ellipse"></div>
+                <img
+                  src="img/map.png"
+                  alt=""
+                  class="recently-viewed-slider__item-footer--map"
+                />
+                <p class="recently-viewed-slider__item-footer--text">
+                  2.5 miles
+                </p>
+              </div>
+            </div>
+            <div class="recently-viewed-slider__item">
               <img
-                src="img/map.png"
+                class="recently-viewed-slider__item-img"
+                src="img/card4.png"
                 alt=""
-                class="card__footer card__footer--map"
               />
-              <p class="sub-heading--1 card__footer--text">2.5 miles</p>
+              <h4 class="recently-viewed-slider__item-title">Beauty Salon</h4>
+              <p class="recently-viewed-slider__item-subtitle">
+                16 Newgate Street, United Kingdom
+              </p>
+              <div class="recently-viewed-slider__item-footer">
+                <img
+                  src="img/bintang.png"
+                  alt=""
+                  class="recently-viewed-slider__item-footer--rate"
+                />
+                <p class="precently-viewed-slider__item-footer--text">5.0</p>
+                <div class="recently-viewed-slider__item-footer--ellipse"></div>
+                <img
+                  src="img/map.png"
+                  alt=""
+                  class="recently-viewed-slider__item-footer--map"
+                />
+                <p class="recently-viewed-slider__item-footer--text">
+                  2.5 miles
+                </p>
+              </div>
+            </div>
+            <div class="recently-viewed-slider__item">
+              <img
+                class="recently-viewed-slider__item-img"
+                src="img/card3.png"
+                alt=""
+              />
+              <h4 class="recently-viewed-slider__item-title">Beauty Salon</h4>
+              <p class="recently-viewed-slider__item-subtitle">
+                16 Newgate Street, United Kingdom
+              </p>
+              <div class="recently-viewed-slider__item-footer">
+                <img
+                  src="img/bintang.png"
+                  alt=""
+                  class="recently-viewed-slider__item-footer--rate"
+                />
+                <p class="precently-viewed-slider__item-footer--text">5.0</p>
+                <div class="recently-viewed-slider__item-footer--ellipse"></div>
+                <img
+                  src="img/map.png"
+                  alt=""
+                  class="recently-viewed-slider__item-footer--map"
+                />
+                <p class="recently-viewed-slider__item-footer--text">
+                  2.5 miles
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -633,32 +580,34 @@
     <footer class="footer">
       <div class="footers">
         <div class="footers__left">
-          <img class="kyue-logo" src="img/logo2.png" alt="Logo2" />
-          <div class="social-media-icons">
+          <a href="#" class=""
+            ><img class="kyue-logo" src="img/logo2.png" alt="Logo2"
+          /></a>
+          <a href="#" class="social-media-icons">
             <img src="img/facebook.png" alt="Facebook" />
             <img src="img/linkedin.png" alt="LinkedIn" />
             <img src="img/insta.png" alt="Instagram" />
             <img src="img/twitter.png" alt="Twitter" />
-          </div>
+          </a>
         </div>
         <div class="footers__right">
-          <p class="heading--3 footers__text">Get the app on:</p>
-          <div class="download-icons">
+          <p class="footers__text--1">Get the app on:</p>
+          <a class="download-icons" href="#">
             <img class="dowload_logo" src="img/appstore.png" alt="App Store" />
             <img
               class="dowload_logo"
               src="img/googleplay.png"
               alt="Google Play"
             />
-          </div>
+          </a>
         </div>
       </div>
 
       <div class="footer__text">
         <p class="copyright">© 2023 Kyue. All Rights Reserved</p>
         <div class="footer__right">
-          <p class="term">Terms of Service</p>
-          <p class="privacy">Privacy Policy</p>
+          <a href="#" class="term">Terms of Service</a>
+          <a href="#" class="privacy">Privacy Policy</a>
         </div>
       </div>
     </footer>
@@ -691,9 +640,22 @@
         });
       });
 
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menu-toggle");
+        const menuIcon = document.querySelector(".header__menu-icon");
+
+        menuToggle.addEventListener("change", function () {
+          if (menuToggle.checked) {
+            menuIcon.innerHTML = "&#10006;"; // Change to X
+          } else {
+            menuIcon.innerHTML = "&#9776;"; // Change back to hamburger icon
+          }
+        });
+      });
+
       $(document).ready(function () {
         // Main Slider
-        $(".slider").slick({
+        $(".popular-slider").slick({
           dots: false,
           infinite: true,
           autoplay: false,
@@ -754,7 +716,7 @@
         });
 
         // Top Rated Slider
-        $(".slider-2").slick({
+        $(".top-rated-slider").slick({
           dots: false,
           infinite: true,
           speed: 300,
@@ -800,7 +762,7 @@
           ],
         });
       });
-      $(".slider-3").slick({
+      $(".recently-viewed-slider").slick({
         dots: false,
         infinite: true,
         autoplay: false,

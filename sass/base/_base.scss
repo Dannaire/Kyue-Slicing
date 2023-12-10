@@ -7,6 +7,7 @@
 }
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -20,15 +21,15 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: 90vh min-content  repeat(3, min-content);
+    grid-template-rows: 42rem min-content  repeat(3, min-content);
     grid-template-columns: [sidebar-start] 5rem [sidebar-end full-start] minmax(5rem, 1fr)  [center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(5rem, 1fr) [full-end] ;
 
-    @media (max-width: map-get($grid-breakpoints, xl)) {
-        grid-template-rows: 60vh min-content repeat(3, min-content);
-    }
     @media (max-width: map-get($grid-breakpoints, lg)) {
-        grid-template-rows: 50vh min-content repeat(3, min-content);
+        grid-template-rows: 35rem min-content repeat(3, min-content);
         grid-template-columns: [sidebar-start] 3rem [sidebar-end full-start] minmax(5rem, 1fr)  [center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(3rem, 1fr) [full-end] ;
+    }
+    @media (max-width: map-get($grid-breakpoints, md)) {
+        grid-template-rows: 30rem min-content repeat(3, min-content);
     }
     @media (max-width: map-get($grid-breakpoints, sm)) {
         grid-template-rows: min-content min-content repeat(2, min-content);

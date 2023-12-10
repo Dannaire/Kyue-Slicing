@@ -1,7 +1,12 @@
-.header {
+.hero {
   background-color: $color-primary;
   grid-column: 1/-1;
-  padding: 0 0 0 5rem;
+  position: relative;
+  padding: 0 5rem;
+  // border: 1px solid red;
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    padding: 0 0 0 3rem;
+}
   @media (max-width: map-get($grid-breakpoints, sm)) {
     padding: 11rem 1.5rem 2rem 1.5rem;
     background-color: $color-bcg !important;

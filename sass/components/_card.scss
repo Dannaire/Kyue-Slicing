@@ -1,33 +1,27 @@
-.card {
+.popular-slider__wrapper {
   margin-top: 2rem;
 
   @media (max-width: map-get($grid-breakpoints, sm)) {
     margin-top: 0;
   }
 }
-.card--2 {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1rem;
-  gap: 1rem;
-  @media (max-width: map-get($grid-breakpoints, lg-2)) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media (max-width: map-get($grid-breakpoints, lg)) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-.card__content {
+.popular-slider__item {
   cursor: pointer;
   background-color: #ffffff;
   border-radius: 0.75rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   text-align: center;
+  // color: red !important;
+  z-index: 999999;
 
-  .card__img {
+  &:hover {
+    transform: scale(1.015);
+    transition: all 0.2s;
+  }
+
+  .popular-slider__item-img {
     width: 100%;
     height: auto;
     margin-bottom: 15px;
@@ -35,16 +29,81 @@
     margin: 0 auto;
   }
 
-  .card__title {
+  .popular-slider__item-title {
     text-align: left;
     margin-bottom: 0.6rem;
+    color: $color-black;
   }
 
-  .card__subtitle {
+  .popular-slider__item-subtitle {
     text-align: left;
     margin-bottom: 1rem;
   }
-  .card__footer {
+  .popular-slider__item-footer {
+    display: flex;
+
+    &--text {
+      margin-left: 0.3rem;
+      white-space: nowrap;
+    }
+    &--ellipse {
+      align-self: center;
+      border-radius: 50%;
+      margin: 0 0.75rem;
+      width: 0.25rem;
+      height: 0.25rem;
+      background-color: $color-grey-light-2;
+    }
+  }
+  &--4 {
+    @media (max-width: map-get($grid-breakpoints, lg-2)) {
+      display: none;
+    }
+  }
+}
+
+.recently-viewed-slider__wrapper {
+  margin-top: 2rem;
+
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    margin-top: 0;
+  }
+}
+
+.recently-viewed-slider__item {
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  // color: red !important;
+  z-index: 999999;
+
+  &:hover {
+    transform: scale(1.015);
+    transition: all 0.2s;
+  }
+
+  .recently-viewed-slider__item-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    align-self: center;
+    margin: 0 auto;
+  }
+
+  .recently-viewed-slider__item-title {
+    text-align: left;
+    margin-bottom: 0.6rem;
+    color: $color-black;
+  }
+
+  .recently-viewed-slider__item-subtitle {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  .recently-viewed-slider__item-footer {
     display: flex;
 
     &--text {
@@ -81,7 +140,7 @@
     margin: 0 0 0 -3.5rem !important;
   }
 }
-.slider-2 {
+.top-rated-slider {
   .slick-track {
     @media (max-width: map-get($grid-breakpoints, md)) {
       margin: 0 0 0 -4rem !important;
@@ -114,6 +173,9 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
+  &:hover {
+    background-color: $color-grey-light-1;
+  }
 }
 
 .custom-arrow img {
@@ -140,14 +202,13 @@
     top: 50%;
   }
 }
-
-.cards {
+.top-rated-slider__wrapper {
   margin-top: 2rem;
   @media (max-width: map-get($grid-breakpoints, sm)) {
     margin-top: 0;
   }
 
-  .card__content--landscape {
+  .top-rated-slider__item {
     max-height: 140px;
     display: flex !important;
     background-color: #ffffff;
@@ -156,11 +217,15 @@
     padding: 1rem;
     cursor: pointer;
 
+    &:hover {
+      transform: scale(1.015);
+    }
+
     @media (max-width: map-get($grid-breakpoints, lg)) {
       padding: 1rem 0 1rem 1rem;
     }
 
-    .card-left {
+    .top-rated-slider__item-left {
       width: 30%;
       display: flex;
       flex-direction: column;
@@ -168,25 +233,26 @@
       justify-content: center;
     }
 
-    .card__img {
+    .top-rated-slider__item-img {
       max-width: 100px;
       height: 100px;
       border-radius: 10px;
     }
-    .card-right {
+    .top-rated-slider__item-right {
       padding: 0 1rem;
       white-space: nowrap;
     }
 
-    .card__subtitle {
+    .top-rated-slider__item-subtitle {
       margin-bottom: 0.5rem;
     }
-
-    .card__footer {
+    .top-rated-slider__item-footer {
       display: flex;
-      margin-top: 0.1rem;
-      padding: 0rem;
 
+      &--text {
+        margin-left: 0.3rem;
+        white-space: nowrap;
+      }
       &--ellipse {
         align-self: center;
         border-radius: 50%;

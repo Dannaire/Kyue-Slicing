@@ -7,6 +7,12 @@
     font-size: 1.2rem;
   }
 }
+.popular__title,
+.top-rated__title,
+.recently-viewed__title {
+  @extend .heading--1;
+}
+
 .heading--2 {
   font-weight: 600;
   font-size: 1.5rem;
@@ -17,14 +23,24 @@
     margin-top: 0.2rem;
   }
 }
+.popular-slider__item-title,
+.top-rated-slider__item-title,
+.recently-viewed-slider__item-title {
+  @extend .heading--2;
+}
 .heading--3 {
   font-weight: 600;
   font-size: 1.25rem;
   color: $color-black;
+  margin-bottom: 0.5rem;
   @media (max-width: map-get($grid-breakpoints, sm)) {
     font-size: 1rem;
   }
 }
+.footers__text--1 {
+  @extend .heading--3;
+}
+
 .sub-heading {
   font-weight: 500;
   font-size: 1.25rem;
@@ -41,6 +57,11 @@
     filter: grayscale(60%) brightness(80%);
   }
 }
+.popular__link,
+.top-rated__link,
+.recently-viewed__link {
+  @extend .sub-heading;
+}
 .sub-heading--2 {
   font-weight: 500;
   font-size: 1.25rem;
@@ -49,68 +70,79 @@
     font-size: 1rem;
   }
 }
+.popular-slider__item-subtitle,
+.top-rated-slider__item-subtitle,
+.recently-viewed-slider__item-subtitle {
+  @extend .sub-heading--2;
+}
 .sub-heading--1 {
   font-weight: 400;
   font-size: 1rem;
   color: $color-grey-light-2;
 }
-
-.header {
-  line-height: 0rem;
-  &__title {
-    font-size: 4.5rem;
-    font-weight: 600;
-    color: $color-black;
-
-    @media (max-width: map-get($grid-breakpoints, xl)) {
-      font-size: 3.7rem;
-    }
-    @media (max-width: map-get($grid-breakpoints, lg-1)) {
-      font-size: 3.5rem;
-    }
-    @media (max-width: map-get($grid-breakpoints, lg)) {
-      font-size: 2.7rem;
-    }
-    @media (max-width: map-get($grid-breakpoints, md)) {
-      font-size: 2.15rem;
-    }
-    @media (max-width: map-get($grid-breakpoints, sm)) {
-      font-size: 1.5rem;
-    }
-  }
-  &__text {
-    line-height: 5rem;
-    @media (max-width: map-get($grid-breakpoints, lg)) {
-      line-height: 4rem;
-    }
-    @media (max-width: map-get($grid-breakpoints, md)) {
-      line-height: 2.5rem;
-    }
-    @media (max-width: map-get($grid-breakpoints, sm)) {
-      line-height: 2rem;
-    }
-  }
-  &__span {
-    color: $color-primary-light;
-  }
-  &__caption {
-    font-size: 1.5rem;
-    line-height: 1.6rem;
-    font-weight: 400;
-    color: $color-grey-light-2;
-
-    @media (max-width: map-get($grid-breakpoints, lg)) {
-      font-size: 1.09rem;
-    }
-    @media (max-width: map-get($grid-breakpoints, md)) {
-      font-size: 0.825rem;
-    }
-  }
-  &__search {
-    color: $color-grey-light-2;
-  }
+.popular-slider__item-footer--text,
+.top-rated-slider__item-footer--text,
+.recently-viewed-slider__item-footer--text {
+  @extend .sub-heading--1;
 }
 
+.hero {
+  line-height: 0rem;
+  .hero__item {
+    &-left {
+      font-size: 4.5rem;
+      font-weight: 600;
+      color: $color-black;
+
+      @media (max-width: map-get($grid-breakpoints, xl)) {
+        font-size: 3.7rem;
+      }
+      @media (max-width: map-get($grid-breakpoints, lg-1)) {
+        font-size: 3.5rem;
+      }
+      @media (max-width: map-get($grid-breakpoints, lg)) {
+        font-size: 2.7rem;
+      }
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        font-size: 2.15rem;
+      }
+      @media (max-width: map-get($grid-breakpoints, sm)) {
+        font-size: 1.5rem;
+      }
+    }
+    &--text {
+      line-height: 5rem;
+      @media (max-width: map-get($grid-breakpoints, lg)) {
+        line-height: 4rem;
+      }
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        line-height: 2.5rem;
+      }
+      @media (max-width: map-get($grid-breakpoints, sm)) {
+        line-height: 2rem;
+      }
+    }
+    &--span {
+      color: $color-primary-light;
+    }
+    &-caption {
+      font-size: 1.5rem;
+      line-height: 1.6rem;
+      font-weight: 400;
+      color: $color-grey-light-2;
+
+      @media (max-width: map-get($grid-breakpoints, lg)) {
+        font-size: 1.09rem;
+      }
+      @media (max-width: map-get($grid-breakpoints, md)) {
+        font-size: 0.825rem;
+      }
+    }
+    &-search {
+      color: $color-grey-light-2;
+    }
+  }
+}
 .feature {
   font-weight: 500;
   color: $color-black;
