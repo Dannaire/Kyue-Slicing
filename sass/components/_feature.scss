@@ -1,7 +1,22 @@
-.feature {
+.feature__container {
+  padding: 0 5rem;
+  position: relative;
+  z-index: 90;
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    padding: 0 3rem;
+}
+@media (max-width: map-get($grid-breakpoints, sm)) {
+  padding: 0 1rem 2rem 1rem;
+  background-color: $color-primary;
+  z-index: 0;
+}
+@media (max-width: map-get($grid-breakpoints, xs-3)) {
+  padding: 0 1rem 2rem 1rem; 
+}
+  .feature__wrapper{
   background-color: $color-white;
   border-radius: 0.75rem;
-  grid-column: 2 / 11;
+  // grid-column: 2 / 11;
   transform: translateY(-50%);
   height: 11.875rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -15,11 +30,10 @@
   }
   @media (max-width: map-get($grid-breakpoints, sm)) {
     transform: translateY(0);
-    grid-column: 2 / 11;
     background-color: transparent;
     box-shadow: none;
   }
-
+}
   .feature__item {
     cursor: pointer;
     display: flex;
@@ -35,6 +49,7 @@
 
     @media (max-width: map-get($grid-breakpoints, lg)) {
       padding: 0;
+      z-index: 4;
     }
 
     .feature__icon {

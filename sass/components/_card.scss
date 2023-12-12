@@ -6,22 +6,22 @@
   }
 }
 
-.popular-slider__item {
+.slider__item {
   cursor: pointer;
   background-color: #ffffff;
   border-radius: 0.75rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   text-align: center;
+  color: $color-black;
   // color: red !important;
   z-index: 999999;
 
   &:hover {
-    transform: scale(1.015);
-    transition: all 0.2s;
+    color: $color-primary-light;
   }
 
-  .popular-slider__item-img {
+  .slider__item-img {
     width: 100%;
     height: auto;
     margin-bottom: 15px;
@@ -29,24 +29,25 @@
     margin: 0 auto;
   }
 
-  .popular-slider__item-title {
+  .slider__item-title {
     text-align: left;
     margin-bottom: 0.6rem;
-    color: $color-black;
+    margin-top: .5rem;
+    // color: $color-black;
   }
 
-  .popular-slider__item-subtitle {
+  .slider__item-subtitle {
     text-align: left;
     margin-bottom: 1rem;
   }
-  .popular-slider__item-footer {
+  .slider__item-footer {
     display: flex;
 
-    &--text {
+    &-value {
       margin-left: 0.3rem;
       white-space: nowrap;
     }
-    &--ellipse {
+    &-ellipse {
       align-self: center;
       border-radius: 50%;
       margin: 0 0.75rem;
@@ -55,11 +56,11 @@
       background-color: $color-grey-light-2;
     }
   }
-  &--4 {
-    @media (max-width: map-get($grid-breakpoints, lg-2)) {
-      display: none;
-    }
-  }
+  // &-4 {
+  //   @media (max-width: map-get($grid-breakpoints, lg-2)) {
+  //     display: none;
+  //   }
+  // }
 }
 
 .recently-viewed-slider__wrapper {
@@ -70,61 +71,61 @@
   }
 }
 
-.recently-viewed-slider__item {
-  cursor: pointer;
-  background-color: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-  text-align: center;
-  // color: red !important;
-  z-index: 999999;
+// .recently-viewed-slider__item {
+//   cursor: pointer;
+//   background-color: #ffffff;
+//   border-radius: 0.75rem;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//   padding: 1.5rem;
+//   text-align: center;
+//   // color: red !important;
+//   color: $color-black;
+//   z-index: 999999;
 
-  &:hover {
-    transform: scale(1.015);
-    transition: all 0.2s;
-  }
+//   &:hover {
+//     color: $color-primary-light;
+//   }
 
-  .recently-viewed-slider__item-img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-    align-self: center;
-    margin: 0 auto;
-  }
+//   .recently-viewed-slider__item-img {
+//     width: 100%;
+//     height: auto;
+//     margin-bottom: 15px;
+//     align-self: center;
+//     margin: 0 auto;
+//   }
 
-  .recently-viewed-slider__item-title {
-    text-align: left;
-    margin-bottom: 0.6rem;
-    color: $color-black;
-  }
+//   .recently-viewed-slider__item-title {
+//     text-align: left;
+//     margin-bottom: 0.6rem;
+//     margin-top: .5rem;
+//   }
 
-  .recently-viewed-slider__item-subtitle {
-    text-align: left;
-    margin-bottom: 1rem;
-  }
-  .recently-viewed-slider__item-footer {
-    display: flex;
+//   .recently-viewed-slider__item-subtitle {
+//     text-align: left;
+//     margin-bottom: 1rem;
+//   }
+//   .recently-viewed-slider__item-footer {
+//     display: flex;
 
-    &--text {
-      margin-left: 0.3rem;
-      white-space: nowrap;
-    }
-    &--ellipse {
-      align-self: center;
-      border-radius: 50%;
-      margin: 0 0.75rem;
-      width: 0.25rem;
-      height: 0.25rem;
-      background-color: $color-grey-light-2;
-    }
-  }
-  &--4 {
-    @media (max-width: map-get($grid-breakpoints, lg-2)) {
-      display: none;
-    }
-  }
-}
+//     &--text {
+//       margin-left: 0.3rem;
+//       white-space: nowrap;
+//     }
+//     &--ellipse {
+//       align-self: center;
+//       border-radius: 50%;
+//       margin: 0 0.75rem;
+//       width: 0.25rem;
+//       height: 0.25rem;
+//       background-color: $color-grey-light-2;
+//     }
+//   }
+//   &--4 {
+//     @media (max-width: map-get($grid-breakpoints, lg-2)) {
+//       display: none;
+//     }
+//   }
+// }
 
 .slick-slide {
   margin: 1rem 1rem 1rem 0.1rem;
@@ -138,6 +139,9 @@
 .slick-track {
   @media (max-width: map-get($grid-breakpoints, xs-3)) {
     margin: 0 0 0 -3.5rem !important;
+  }
+  @media (max-width: map-get($grid-breakpoints, xs-2)) {
+    margin: 0  !important;
   }
 }
 .top-rated-slider {
@@ -212,13 +216,14 @@
     max-height: 140px;
     display: flex !important;
     background-color: #ffffff;
+    color: $color-black;
     border-radius: 0.75rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     cursor: pointer;
 
     &:hover {
-      transform: scale(1.015);
+      color: $color-primary-light;
     }
 
     @media (max-width: map-get($grid-breakpoints, lg)) {
@@ -234,24 +239,44 @@
     }
 
     .top-rated-slider__item-img {
-      max-width: 100px;
-      height: 100px;
+      max-width: 6.25rem;
+      height: 6.25rem;
       border-radius: 10px;
+      @media (max-width: map-get($grid-breakpoints, xs-2)) {
+        // width: 60%;
+        height: 5rem;
+      }
     }
     .top-rated-slider__item-right {
       padding: 0 1rem;
       white-space: nowrap;
     }
-
+    .top-rated-slider__item-footer--map{
+      @media (max-width: map-get($grid-breakpoints, xs-2)) {
+        margin-left: 1rem;
+      }
+    }
+    .top-rated-slider__item-title{
+      @media (max-width: map-get($grid-breakpoints, xs-2)) {
+        font-size: 1rem;
+      }
+    }
     .top-rated-slider__item-subtitle {
       margin-bottom: 0.5rem;
+      @media (max-width: map-get($grid-breakpoints, xs-2)) {
+        font-size: .9rem;
+      }
     }
     .top-rated-slider__item-footer {
       display: flex;
-
+      
       &--text {
         margin-left: 0.3rem;
         white-space: nowrap;
+        @media (max-width: map-get($grid-breakpoints, xs-2)) {
+          font-size: .8rem;
+          margin: .1rem .1rem 0 .1rem;
+        }
       }
       &--ellipse {
         align-self: center;
@@ -260,6 +285,10 @@
         width: 0.25rem;
         height: 0.25rem;
         background-color: $color-grey-light-2;
+        @media (max-width: map-get($grid-breakpoints, xs-2)) {
+          display: none;
+        }
+
       }
     }
   }

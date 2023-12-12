@@ -16,14 +16,14 @@
 .heading--2 {
   font-weight: 600;
   font-size: 1.5rem;
-  color: $color-black;
+  // color: $color-black;
 
   @media (max-width: map-get($grid-breakpoints, sm)) {
     font-size: 1.2rem;
     margin-top: 0.2rem;
   }
 }
-.popular-slider__item-title,
+.slider__item-title,
 .top-rated-slider__item-title,
 .recently-viewed-slider__item-title {
   @extend .heading--2;
@@ -70,7 +70,7 @@
     font-size: 1rem;
   }
 }
-.popular-slider__item-subtitle,
+.slider__item-subtitle,
 .top-rated-slider__item-subtitle,
 .recently-viewed-slider__item-subtitle {
   @extend .sub-heading--2;
@@ -80,7 +80,7 @@
   font-size: 1rem;
   color: $color-grey-light-2;
 }
-.popular-slider__item-footer--text,
+.slider__item-footer-value,
 .top-rated-slider__item-footer--text,
 .recently-viewed-slider__item-footer--text {
   @extend .sub-heading--1;
@@ -107,7 +107,13 @@
         font-size: 2.15rem;
       }
       @media (max-width: map-get($grid-breakpoints, sm)) {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+      }
+      @media (max-width: map-get($grid-breakpoints, xs-3)) {
+        font-size: 1.4rem;
+      }
+      @media (max-width: map-get($grid-breakpoints, xs-2)) {
+        font-size: 1rem;
       }
     }
     &--text {
@@ -120,6 +126,12 @@
       }
       @media (max-width: map-get($grid-breakpoints, sm)) {
         line-height: 2rem;
+      }
+      @media (max-width: map-get($grid-breakpoints, xs-3)) {
+        line-height: 1.5rem;
+      }
+      @media (max-width: map-get($grid-breakpoints, xs-2)) {
+        line-height: 1.2rem;
       }
     }
     &--span {
@@ -136,6 +148,14 @@
       }
       @media (max-width: map-get($grid-breakpoints, md)) {
         font-size: 0.825rem;
+      }
+      @media (max-width: map-get($grid-breakpoints, xs-3)) {
+        font-size: 0.725rem;
+        line-height: 1rem;
+      }
+      @media (max-width: map-get($grid-breakpoints, xs-3)) {
+        font-size: 0.625rem;
+        line-height: .8rem;
       }
     }
     &-search {

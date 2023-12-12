@@ -1,21 +1,40 @@
 .hero {
   background-color: $color-primary;
-  grid-column: 1/-1;
   position: relative;
   padding: 0 5rem;
+  height: 42rem;
+  overflow: hidden;
   // border: 1px solid red;
   @media (max-width: map-get($grid-breakpoints, lg)) {
-    padding: 0 0 0 3rem;
+    padding: 0 3rem;
+    height: 35rem;
+}
+@media (max-width: map-get($grid-breakpoints, md)) {
+  height: 30rem;
 }
   @media (max-width: map-get($grid-breakpoints, sm)) {
-    padding: 11rem 1.5rem 2rem 1.5rem;
-    background-color: $color-bcg !important;
+    padding: 4rem 1rem 2rem 1rem;
+    max-height: 24rem;;
+    background-color: $color-primary !important;
+    
+  }
+  @media (max-width: map-get($grid-breakpoints, xs-3)) {
+    padding: 3rem 1rem 2rem 1.5rem;
+    max-height: 19rem;;
+    background-color: $color-primary !important;
+    
   }
 }
 
 .popular {
-  grid-column: 2 / col-end 8;
+  padding: 0 5rem;
 
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    padding: 0 3rem;
+}
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    padding: 1.5rem;
+  }
   .popular__wrap {
     display: flex;
     justify-content: space-between;
@@ -29,8 +48,13 @@
 }
 
 .top-rated {
-  grid-column: 2 / col-end 8;
-
+  padding: 0 5rem;
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    padding: 0 3rem;
+}
+@media (max-width: map-get($grid-breakpoints, sm)) {
+  padding: 1.5rem;
+}
   .top-rated__wrap {
     display: flex;
     justify-content: space-between;
@@ -43,8 +67,13 @@
 }
 
 .recently-viewed {
-  grid-column: 2 / col-end 8;
-
+  padding: 0 5rem;
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    padding: 0 3rem;
+}
+@media (max-width: map-get($grid-breakpoints, sm)) {
+  padding: 1.5rem;
+}
   .recently-viewed__wrap {
     display: flex;
     justify-content: space-between;
@@ -58,7 +87,6 @@
 .footer {
   height: 22rem;
   margin-top: 4rem;
-  grid-column: 1 / full-end;
   display: flex;
   flex-direction: column;
   padding: 0 5rem;

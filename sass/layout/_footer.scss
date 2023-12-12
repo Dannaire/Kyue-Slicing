@@ -13,10 +13,22 @@
     @media (max-width: map-get($grid-breakpoints, xs-3)) {
       font-size: 0.6rem;
     }
+    @media (max-width: map-get($grid-breakpoints, xs-2)) {
+      flex-direction: column-reverse;
+      justify-content: center;
+      text-align: center;
+      padding: .7rem 0;
+    }
   }
   .footer__right {
     display: flex;
     justify-content: space-between;
+    @media (max-width: map-get($grid-breakpoints, xs-2)) {
+      // flex-direction: column;
+      // justify-content: center;
+      text-align: center;
+      justify-content: center ;
+    }
   }
 
   .term,
@@ -35,6 +47,9 @@
     @media (max-width: map-get($grid-breakpoints, xs-3)) {
       margin-right: 0.6rem;
     }
+    @media (max-width: map-get($grid-breakpoints, xs-2)) {
+      margin: 0 .5rem .3rem .5rem;
+    }
   }
 }
 .footers {
@@ -44,6 +59,12 @@
   align-items: center;
   margin-bottom: 4rem;
 
+  @media (max-width: map-get($grid-breakpoints, xs-2)) {
+    flex-direction: column;
+    text-align: center;
+    margin: 3rem 0;
+  }
+
   .footers__left {
     display: flex;
     flex-direction: column;
@@ -51,6 +72,10 @@
       width: 6.875rem;
       height: 3rem;
       cursor: pointer;
+
+      @media (max-width: map-get($grid-breakpoints, xs-2)) {
+        margin-right: .8rem;
+      }
     }
 
     .social-media-icons {
@@ -67,6 +92,10 @@
         gap: 0.5rem;
         margin-top: 0.8rem;
       }
+      @media (max-width: map-get($grid-breakpoints, xs-2)) {
+        margin-top: 0;
+        // margin-left: 1rem;
+      }
 
       img {
         &:hover {
@@ -82,6 +111,9 @@
     display: flex;
     flex-direction: column;
     // border: 1px solid rebeccapurple;
+    @media (max-width: map-get($grid-breakpoints, xs-2)) {
+      margin-top: 1rem;
+    }
     .download-icons{
       text-decoration: none;
       .dowload_logo {
@@ -102,6 +134,7 @@
           width: 4.5rem;
           height: 1.625rem;
         }
+
       }
     }
     
