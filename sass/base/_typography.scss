@@ -81,7 +81,7 @@
   color: $color-grey-light-2;
 }
 .slider__item-footer-value,
-.top-rated-slider__item-footer--text,
+.top-rated-slider__item-footer-text,
 .recently-viewed-slider__item-footer--text {
   @extend .sub-heading--1;
 }
@@ -116,7 +116,7 @@
         font-size: 1rem;
       }
     }
-    &--text {
+    &-text {
       line-height: 5rem;
       @media (max-width: map-get($grid-breakpoints, lg)) {
         line-height: 4rem;
@@ -134,7 +134,7 @@
         line-height: 1.2rem;
       }
     }
-    &--span {
+    &-span {
       color: $color-primary-light;
     }
     &-caption {
